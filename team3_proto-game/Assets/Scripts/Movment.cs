@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movment : MonoBehaviour
 {
-    public float speed;
+    public float speed = 3;
     public bool faceRight= true ;
     // Start is called before the first frame update
     void Start()
