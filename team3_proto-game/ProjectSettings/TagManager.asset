@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - Background
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - Gems
+  - Octo
+  - Enemies
   - 
   - 
   - 
@@ -43,4 +43,16 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2671531273
+    locked: 0
+  - name: Walls
+    uniqueID: 4068536577
+    locked: 0
+  - name: Gems
+    uniqueID: 1911658517
+    locked: 0
+  - name: Octo
+    uniqueID: 3173894753
+    locked: 0
+  - name: Enemies
+    uniqueID: 1798495009
     locked: 0
