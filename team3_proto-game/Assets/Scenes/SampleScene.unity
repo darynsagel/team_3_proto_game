@@ -7743,5 +7743,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665328, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665328, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665328, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665328, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665328, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665328, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6374e9d64ac4763a596a655df7973f, type: 3}
