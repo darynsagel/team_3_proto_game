@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 	public float speed;
 
-    private GameObject CageObj;
+    private GameObject CageObj, Gem;
 	private Rigidbody2D rb;
 	private Vector2 moveVelocity;
 
@@ -34,6 +34,41 @@ public class PlayerController : MonoBehaviour
         {
             CageObj = GameObject.FindGameObjectWithTag("Cage");
             Object.Destroy(CageObj);
+        }
+        else if (other.gameObject.CompareTag("VictoryFish"))
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
+        }
+        else if (other.gameObject.CompareTag("Gem1"))
+        {
+            Gem = GameObject.FindGameObjectWithTag("Gem1");
+            Object.Destroy(Gem);
+        }
+        else if (other.gameObject.CompareTag("Gem2"))
+        {
+            Gem = GameObject.FindGameObjectWithTag("Gem2");
+            Object.Destroy(Gem);
+        }
+        else if (other.gameObject.CompareTag("Gem3"))
+        {
+            Gem = GameObject.FindGameObjectWithTag("Gem3");
+            Object.Destroy(Gem);
+        }
+        else if (other.gameObject.CompareTag("Gem4"))
+        {
+            Gem = GameObject.FindGameObjectWithTag("Gem4");
+            Object.Destroy(Gem);
+        }
+        else if (other.gameObject.CompareTag("Gem5"))
+        {
+            Gem = GameObject.FindGameObjectWithTag("Gem5");
+            Object.Destroy(Gem);
+        }
+        else if (other.gameObject.CompareTag("Gem10"))
+        {
+            Gem = GameObject.FindGameObjectWithTag("Gem10");
+            Object.Destroy(Gem);
         }
     }
 }
