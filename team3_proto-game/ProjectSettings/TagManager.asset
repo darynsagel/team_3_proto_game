@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Button
+  - Enemy
+  - Cage
   layers:
   - Default
   - TransparentFX

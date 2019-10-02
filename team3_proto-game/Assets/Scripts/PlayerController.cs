@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 	public float speed;
 
+    private GameObject CageObj;
 	private Rigidbody2D rb;
 	private Vector2 moveVelocity;
 
@@ -26,4 +27,13 @@ public class PlayerController : MonoBehaviour
 	{
 		rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Button"))
+        {
+            CageObj = GameObject.FindGameObjectWithTag("Cage");
+            Object.Destroy(CageObj);
+        }
+    }
 }
