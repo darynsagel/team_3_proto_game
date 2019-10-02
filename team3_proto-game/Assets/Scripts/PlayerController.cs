@@ -71,4 +71,12 @@ public class PlayerController : MonoBehaviour
             Object.Destroy(Gem);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            SoundManager.PlaySound("enemybump");
+        }
+    }
 }
