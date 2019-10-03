@@ -11,9 +11,9 @@ public class FollowTarget : MonoBehaviour
 
     // Stuff needed for clamping
     private bool ymaxenabled = true;
-    private float ymaxvalue = 53.7f;
+    private float ymaxvalue = 47.7f;
     private bool yminenabled = true;
-    private float yminvalue = -13.5f;
+    private float yminvalue = -7.5f;
     private bool xmaxenabled = true;
     private float xmaxvalue = -1.0f;
     private bool xminenabled = true;

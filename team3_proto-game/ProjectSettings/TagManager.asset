@@ -29,7 +29,7 @@ TagManager:
   - Gems
   - Octo
   - Enemies
-  - 
+  - Text
   - 
   - 
   - 
@@ -66,4 +66,7 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 1798495009
+    locked: 0
+  - name: Text
+    uniqueID: 899629375
     locked: 0

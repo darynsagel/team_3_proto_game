@@ -6,10 +6,10 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
 
-    public int score=0;
-    public Text scoreBoard;
-    // Start is called before the first frame update
-    void Start()
+    public Text scoreText;
+    public int scorenum;
+
+    private void Start()
     {
         
     }
@@ -17,14 +17,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ruby")
-        {
-            score++;
-            scoreBoard.text = "Score: " + score;
-        }
+        scorenum = GameObject.Find("Player").GetComponent<PlayerController>().score;
+        scoreText.text = "Gems: " + scorenum.ToString();
     }
 }
