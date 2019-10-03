@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public int score = 0;
     public Text scoreBoard;
 
-    private GameObject CageObj, Gem;
+    private GameObject CageObj, Gem, EnemyHit;
 	private Rigidbody2D rb;
 	private Vector2 moveVelocity;
 
@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             SoundManager.PlaySound("enemybump");
+
         }
     }
 }
