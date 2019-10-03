@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
 	public float speed;
+    public int score = 0;
+    public Text scoreBoard;
 
     private GameObject CageObj, Gem;
 	private Rigidbody2D rb;
@@ -44,31 +47,43 @@ public class PlayerController : MonoBehaviour
         {
             Gem = GameObject.FindGameObjectWithTag("Gem1");
             Object.Destroy(Gem);
+            score++;
+            scoreBoard.text = "Score: " + score;
         }
         else if (other.gameObject.CompareTag("Gem2"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem2");
             Object.Destroy(Gem);
+            score++;
+            scoreBoard.text = "Score: " + score;
         }
         else if (other.gameObject.CompareTag("Gem3"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem3");
             Object.Destroy(Gem);
+            score++;
+            scoreBoard.text = "Score: " + score;
         }
         else if (other.gameObject.CompareTag("Gem4"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem4");
             Object.Destroy(Gem);
+            score++;
+            scoreBoard.text = "Score: " + score;
         }
         else if (other.gameObject.CompareTag("Gem5"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem5");
             Object.Destroy(Gem);
+            score++;
+            scoreBoard.text = "Score: " + score;
         }
         else if (other.gameObject.CompareTag("Gem10"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem10");
             Object.Destroy(Gem);
+            score = score + 10;
+            scoreBoard.text = "Score: " + score;
         }
     }
 
