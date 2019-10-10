@@ -6,11 +6,10 @@ public class Movment : MonoBehaviour
 {
     public float speed = 3;
     public bool faceRight= true ;
-    public Rigidbody2D rd2d;
     // Start is called before the first frame update
     void Start()
     {
-        rd2d.gravityScale = 0;
+        
     }
 
     // Update is called once per frame
@@ -27,7 +26,7 @@ public class Movment : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 faceRight = false;
-                Debug.Log("jhi");
+                Debug.Log("hi");
             }
             else
             {
