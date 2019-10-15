@@ -15,6 +15,7 @@ TagManager:
   - Gem3
   - Gem4
   - Gem5
+  - Enemy(Left)
   layers:
   - Default
   - TransparentFX
