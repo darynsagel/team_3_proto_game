@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 07c8aeb82cf554c0d974e192aff27fca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4490904904807437329
+    second: crawl1
+  - first:
+      213: -1995334373208929924
+    second: crawl2
+  - first:
+      213: 2318490557422107805
+    second: crawl3
+  - first:
+      213: -6426083789072075675
+    second: crawl4
+  - first:
+      213: 6017988582601894157
+    second: crawl5
+  - first:
+      213: 5147626348954703986
+    second: crawl6
+  - first:
+      213: 7281997230300390630
+    second: crawl7
+  - first:
+      213: 1064506932183104989
+    second: crawl8
+  - first:
+      213: 127720585617109889
+    second: octo-spritesheet(forward)_8
+  - first:
+      213: -4789034745672158407
+    second: crawl9
+  - first:
+      213: -675431594242922889
+    second: crawl10
+  - first:
+      213: 7853309568664239490
+    second: crawl11
+  - first:
+      213: 6728751073343389676
+    second: octo-spritesheet(forward)_12
+  - first:
+      213: -8984849902438683713
+    second: crawl12
+  - first:
+      213: -3041002263921774621
+    second: crawl13
+  - first:
+      213: -6393949238816999696
+    second: crawl14
+  - first:
+      213: 8393750284683400351
+    second: crawl15
+  - first:
+      213: 2490160944141076495
+    second: crawl16
+  - first:
+      213: -3036148957154641046
+    second: octo-spritesheet(forward)_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crawl1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 3058
+        width: 642
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a6602425512484682aea5959690849
+      internalID: -4490904904807437329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl2
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 3128
+        width: 656
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f1387f5b4364c22b7fb340da414308
+      internalID: -1995334373208929924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl3
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 3115
+        width: 633
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f86f6cf206c4c189efcbaac2aabd1d
+      internalID: 2318490557422107805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl4
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 3151
+        width: 747
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb443ad7d1e44d9599cac516b0dc1f1
+      internalID: -6426083789072075675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl5
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 2347
+        width: 849
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789ac0313c78b45329a9635e6230d187
+      internalID: 6017988582601894157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 2300
+        width: 858
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442a3c4a9d6f248d7b5a1d1fef33411d
+      internalID: 5147626348954703986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl7
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 2247
+        width: 775
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23de5157252f4923b6d7ecc480c4009
+      internalID: 7281997230300390630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl8
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 2286
+        width: 818
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd9134e718c5423fbfaa2edcb829999
+      internalID: 1064506932183104989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octo-spritesheet(forward)_8
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 2265
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661f329596c574799a8cf82b0c9eab99
+      internalID: 127720585617109889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl9
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1341
+        width: 810
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66604a590b74440dd98ac77c8bbee8a5
+      internalID: -4789034745672158407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl10
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1290
+        width: 885
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cbe24cbba7e4053b561f596358c37c
+      internalID: -675431594242922889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl11
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1356
+        width: 779
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325e5101947034741a95c88b426fd79c
+      internalID: 7853309568664239490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octo-spritesheet(forward)_12
+      rect:
+        serializedVersion: 2
+        x: 2823
+        y: 1493
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f56fe1584c44802b45f5255dc8afb5
+      internalID: 6728751073343389676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl12
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1366
+        width: 795
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5aa1707af8143098178c19a223f364
+      internalID: -8984849902438683713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl13
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 493
+        width: 906
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14766c107760442fa9572c9ca21e1b4
+      internalID: -3041002263921774621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl14
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 526
+        width: 871
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fc71e28e10f4062bae41812a611b0c
+      internalID: -6393949238816999696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl15
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 497
+        width: 814
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c544a2befdc4fbdac83c61a90431b1
+      internalID: 8393750284683400351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawl16
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 421
+        width: 774
+        height: 730
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb1ed0d1cafa416e820935214f0fa90
+      internalID: 2490160944141076495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: octo-spritesheet(forward)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1890
+        width: 180
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9bcf18f71554d309e05f2a37b7fffa
+      internalID: -3036148957154641046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

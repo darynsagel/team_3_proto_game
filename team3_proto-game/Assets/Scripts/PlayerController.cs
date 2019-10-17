@@ -13,10 +13,14 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody2D rb;
 	private Vector2 moveVelocity;
 
+    public Animator animator;
+    float verticalMove, horizontalMove, totalMove, someScale;
+
 	// Start is called before the first frame update
 	void Start()
     {
 		rb = GetComponent<Rigidbody2D>();
+        someScale = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -24,6 +28,26 @@ public class PlayerController : MonoBehaviour
     {
 		Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 		moveVelocity = moveInput.normalized * speed;
+
+        verticalMove = Input.GetAxis("Vertical");
+        horizontalMove = Input.GetAxis("Horizontal");
+
+        totalMove = Mathf.Abs(horizontalMove) + Mathf.Abs(verticalMove);
+
+        animator.SetFloat("speed", Mathf.Abs(totalMove));
+
+        if(horizontalMove < 0)
+        {
+            transform.localScale = new Vector2(-someScale, transform.localScale.y);
+            animator.SetFloat("speed", Mathf.Abs(totalMove));
+        }
+        if(horizontalMove > 0)
+        {
+            transform.localScale = new Vector2(someScale, transform.localScale.y);
+            animator.SetFloat("speed", Mathf.Abs(totalMove));
+        }
+
+
     }
 
     void FixedUpdate()
