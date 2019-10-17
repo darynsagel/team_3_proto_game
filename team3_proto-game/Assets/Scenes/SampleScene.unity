@@ -138,10 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ffce14bbdbf34e80f2a21b47e4319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceRight: 0
+  faceRight: 1
+  faceRightD: 1
   faceLeft: 1
   stopped: 0
   stun: 0
+  hammerShark: {fileID: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1384672974641186352, guid: fad242b72a15741c891c58fb0b7f0507,
@@ -166,10 +168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ffce14bbdbf34e80f2a21b47e4319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceRight: 0
+  faceRight: 1
+  faceRightD: 1
   faceLeft: 1
   stopped: 0
   stun: 0
+  hammerShark: {fileID: 0}
 --- !u!1 &701204151
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,10 +403,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ffce14bbdbf34e80f2a21b47e4319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceRight: 0
+  faceRight: 1
+  faceRightD: 1
   faceLeft: 1
   stopped: 0
   stun: 0
+  hammerShark: {fileID: 0}
 --- !u!4 &2054255013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4893183821821595295, guid: 6822c6f8c0e7a4c9c9a9c2dace69fb63,
@@ -427,10 +433,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ffce14bbdbf34e80f2a21b47e4319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceRight: 0
+  faceRight: 1
+  faceRightD: 1
   faceLeft: 1
   stopped: 0
   stun: 0
+  hammerShark: {fileID: 0}
 --- !u!1001 &92738113321324566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6042,6 +6050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: dolphin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405603890358116471, guid: 2f52cf35eb9804d6a84385536b82fb67,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8405603890358116469, guid: 2f52cf35eb9804d6a84385536b82fb67,
         type: 3}

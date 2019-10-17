@@ -5,14 +5,15 @@ using UnityEngine;
 public class Movement2 : MonoBehaviour
 {
 
-    public bool faceRight = true;
+    public bool faceRight = true, faceRightD = true;
     public bool faceLeft = true;
     public bool stopped = false;
     public float stun = 0;
+    public Transform hammerShark;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,11 +35,11 @@ public class Movement2 : MonoBehaviour
         {
             stun++;
             SpriteRenderer sr = GetComponent<SpriteRenderer>();
-            if(stun == 1)
+            if (stun == 1)
             {
                 sr.color = Color.red;
             }
-            else if(stun == 10)
+            else if (stun == 10)
             {
                 sr.color = Color.white;
             }
@@ -54,42 +55,19 @@ public class Movement2 : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Cage")
-        {
-            switch (gameObject.tag)
+        {           
+            if(gameObject.tag == "Enemy(Left)")
             {
-                case "Enemy(Left)":
-                    Debug.Log("Left facing touch wall");
-                    if (faceRight == true)
-                    {
-                        transform.eulerAngles = new Vector3(0, -180, 0);
-                        faceRight = false;
-
-                    }
-                    else
-                    {
-                        transform.eulerAngles = new Vector3(0, 0, 0);
-                        faceRight = true;
-
-                    }
-                    break;
-                case "Enemy":
-                    Debug.Log("Right facing touch wall");
-                    if (faceLeft == true)
-                    {
-                        transform.eulerAngles = new Vector3(0, -180, 0);
-                        faceLeft = false;
-
-                    }
-                    else
-                    {
-                        transform.eulerAngles = new Vector3(0, 0, 0);
-                        faceLeft = true;
-
-                    }
-                    break;
+                Debug.Log("Left facing touch wall");
+                left();
+            }
+            else
+            {
+                Debug.Log("Right facing touch wall");
+                right();
             }
         }
         if (collision.gameObject.tag == "Player")
@@ -99,6 +77,36 @@ public class Movement2 : MonoBehaviour
             rd2d.bodyType = RigidbodyType2D.Static;
             bc2d.enabled = false;
             stopped = true;
+        }
+    }
+    
+    void left()
+    {
+        if (faceLeft == true)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            faceLeft = false;
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            faceLeft = true;
+        }
+    }
+    void right()
+    {
+        if (faceRight == true)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+
+            faceRight = false;
+
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            faceRight = true;
+
         }
     }
 }
