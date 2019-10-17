@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 701204153}
   - component: {fileID: 701204155}
   m_Layer: 13
-  m_Name: Text
+  m_Name: scoreBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,6 +1575,11 @@ PrefabInstance:
       propertyPath: speed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1543611410109665335, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: scoreBoard
+      value: 
+      objectReference: {fileID: 701204153}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6374e9d64ac4763a596a655df7973f, type: 3}
 --- !u!1001 &1552216849559955087
