@@ -50,6 +50,11 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("speed", Mathf.Abs(totalMove));
         }
 
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) )
+        {
+            SoundManager.PlaySound("bubbles");
+        }
+
 
     }
 

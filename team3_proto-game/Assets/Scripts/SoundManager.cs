@@ -5,12 +5,18 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static AudioClip enemybump;
+    public static AudioClip bubbles;
+    public static AudioClip cage;
+    public static AudioClip gem;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
         enemybump = Resources.Load<AudioClip>("enemybump");
+        bubbles = Resources.Load<AudioClip>("bubbles");
+        cage = Resources.Load<AudioClip>("cage");
+        gem = Resources.Load<AudioClip>("gem");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -26,6 +32,15 @@ public class SoundManager : MonoBehaviour
         {
             case "enemybump":
                 audioSrc.PlayOneShot(enemybump);
+                break;
+            case "cage":
+                audioSrc.PlayOneShot(cage);
+                break;
+            case "gem":
+                audioSrc.PlayOneShot(gem);
+                break;
+            case "bubbles":
+                audioSrc.PlayOneShot(bubbles);
                 break;
         }
     }
