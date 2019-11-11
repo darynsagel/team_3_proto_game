@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public static AudioClip bubbles;
     public static AudioClip cage;
     public static AudioClip gem;
+    public static AudioClip confetti;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class SoundManager : MonoBehaviour
         bubbles = Resources.Load<AudioClip>("bubbles");
         cage = Resources.Load<AudioClip>("cage");
         gem = Resources.Load<AudioClip>("gem");
+        confetti = Resources.Load<AudioClip>("confetti");
         audioSrc = GetComponent<AudioSource>();
 
     }
@@ -42,6 +44,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "bubbles":
                 audioSrc.PlayOneShot(bubbles);
+                break;
+            case "confetti":
+                audioSrc.PlayOneShot(confetti);
                 break;
         }
     }

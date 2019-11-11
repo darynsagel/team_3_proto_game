@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 1821057636}
   - component: {fileID: 1821057635}
   m_Layer: 11
-  m_Name: Particle System
+  m_Name: Particle System _ bubbles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6356,6 +6356,18 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1543611411389783670}
+    - target: {fileID: 1543611410109665335, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: gemsys
+      value: 
+      objectReference: {fileID: 2536114501227104206, guid: 99ee08ddf56b643d1b5bcb41d0f2d743,
+        type: 3}
+    - target: {fileID: 1543611410109665335, guid: cb6374e9d64ac4763a596a655df7973f,
+        type: 3}
+      propertyPath: confetti
+      value: 
+      objectReference: {fileID: 1034722111454891133, guid: 40c45a7665e38455480675bd767486a5,
+        type: 3}
     - target: {fileID: 1543611410109665334, guid: cb6374e9d64ac4763a596a655df7973f,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
