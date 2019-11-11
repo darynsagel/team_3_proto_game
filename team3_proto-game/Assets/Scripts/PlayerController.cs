@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Button"))
         {
             CageObj = GameObject.FindGameObjectWithTag("Cage");
+            SoundManager.PlaySound("cage");
             Object.Destroy(CageObj);
         }
         else if (other.gameObject.CompareTag("VictoryFish"))
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Gem1"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem1");
+            SoundManager.PlaySound("gem");
             Object.Destroy(Gem);
             score++;
             scoreBoard.text = "Score: " + score;
@@ -85,6 +87,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Gem2"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem2");
+            SoundManager.PlaySound("gem");
             Object.Destroy(Gem);
             score++;
             scoreBoard.text = "Score: " + score;
@@ -92,6 +95,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Gem3"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem3");
+            SoundManager.PlaySound("gem");
             Object.Destroy(Gem);
             score++;
             scoreBoard.text = "Score: " + score;
@@ -99,6 +103,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Gem4"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem4");
+            SoundManager.PlaySound("gem");
             Object.Destroy(Gem);
             score++;
             scoreBoard.text = "Score: " + score;
@@ -106,6 +111,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Gem5"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem5");
+            SoundManager.PlaySound("gem");
             Object.Destroy(Gem);
             score++;
             scoreBoard.text = "Score: " + score;
@@ -113,6 +119,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Gem10"))
         {
             Gem = GameObject.FindGameObjectWithTag("Gem10");
+            SoundManager.PlaySound("gem");
             Object.Destroy(Gem);
             score = score + 10;
             scoreBoard.text = "Score: " + score;
@@ -126,5 +133,6 @@ public class PlayerController : MonoBehaviour
             SoundManager.PlaySound("enemybump");
 
         }
+     
     }
 }

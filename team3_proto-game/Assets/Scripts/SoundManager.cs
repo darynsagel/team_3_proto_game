@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
         cage = Resources.Load<AudioClip>("cage");
         gem = Resources.Load<AudioClip>("gem");
         audioSrc = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
