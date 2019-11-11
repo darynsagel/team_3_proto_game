@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     float verticalMove, horizontalMove, totalMove, someScale;
 
+    public ParticleSystem bubbletrail;
+    private ParticleSystem bubbletrail_clone;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -41,7 +44,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector2(-someScale, transform.localScale.y);
             animator.SetFloat("speed", Mathf.Abs(totalMove));
         }
-        if(horizontalMove > 0)
+        if (horizontalMove > 0)
         {
             transform.localScale = new Vector2(someScale, transform.localScale.y);
             animator.SetFloat("speed", Mathf.Abs(totalMove));
