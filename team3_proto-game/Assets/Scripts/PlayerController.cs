@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
 
     public void endgame()
     {
-        //UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
