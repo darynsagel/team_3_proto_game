@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7472740078918085485}
   - component: {fileID: 7472740078918085484}
   - component: {fileID: 7472740078918085490}
-  - component: {fileID: 7472740078918085488}
+  - component: {fileID: 5928313576229761332}
   - component: {fileID: 7472740078918085491}
   m_Layer: 12
   m_Name: hammershark
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30, y: 10}
   m_EdgeRadius: 0
---- !u!114 &7472740078918085488
+--- !u!114 &5928313576229761332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,12 +118,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7472740078918085487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f8db0bba70ba6c48b7fcdcaba8eaf12, type: 3}
+  m_Script: {fileID: 11500000, guid: c75ffce14bbdbf34e80f2a21b47e4319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   faceRight: 1
-  rd2d: {fileID: 0}
+  faceRightD: 1
+  faceLeft: 1
+  stopped: 0
+  stun: 0
+  hammerShark: {fileID: 0}
 --- !u!50 &7472740078918085491
 Rigidbody2D:
   serializedVersion: 4

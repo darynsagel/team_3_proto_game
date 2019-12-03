@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7067930699435324312}
   - component: {fileID: 7067930699435324313}
   - component: {fileID: 7067930699435324318}
-  - component: {fileID: 7067930699435324314}
+  - component: {fileID: 4316281233889857786}
   - component: {fileID: 7067930699435324315}
   m_Layer: 12
   m_Name: eel
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 15}
   m_EdgeRadius: 0
---- !u!114 &7067930699435324314
+--- !u!114 &4316281233889857786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,12 +118,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7067930699435324319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f8db0bba70ba6c48b7fcdcaba8eaf12, type: 3}
+  m_Script: {fileID: 11500000, guid: c75ffce14bbdbf34e80f2a21b47e4319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   faceRight: 1
-  rd2d: {fileID: 0}
+  faceRightD: 1
+  faceLeft: 1
+  stopped: 0
+  stun: 0
+  hammerShark: {fileID: 0}
 --- !u!50 &7067930699435324315
 Rigidbody2D:
   serializedVersion: 4
