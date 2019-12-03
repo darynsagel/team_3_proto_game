@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
 
     public float alph;
 
+    public ParticleSystem inksplot;
+    public KeyCode activate;
+    private float btwntime = 5.0f;
+    private float timetostart = 0.0f;
+    private GameObject enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +73,15 @@ public class PlayerController : MonoBehaviour
 
         alph = GameObject.Find("Player").GetComponent<PlayerAlpha>().alphaLevel;
         speed = GameObject.Find("Player").GetComponent<propulsion>().fast;
+
+        if (Input.GetKeyDown(activate) && Time.time > timetostart)
+        {
+            timetostart = Time.time + btwntime;
+            SoundManager.PlaySound("ink");
+            inksplot.Play();
+            Invoke("stopInk", 3);
+            Invoke("destroyenemy", 2);
+        }
     }
 
     void FixedUpdate()
@@ -299,13 +313,14 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Enemy(Left)"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Enemy(Left)") || other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e1") || other.gameObject.CompareTag("e5") || other.gameObject.CompareTag("e6"))
         {
             SoundManager.PlaySound("enemybump");
 
         }
      
     }
+
 
     public void endgame()
     {
@@ -319,4 +334,36 @@ public class PlayerController : MonoBehaviour
         gemtext.text = "";
     }
 
+    public void stopInk()
+    {
+        inksplot.Stop();
+    }
+
+    public void destroyenemy()
+    {
+
+        enemy = GameObject.FindGameObjectWithTag("e1");
+        if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
+            Object.Destroy(enemy);
+
+        enemy = GameObject.FindGameObjectWithTag("e2");
+        if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
+            Object.Destroy(enemy);
+
+        enemy = GameObject.FindGameObjectWithTag("e3");
+        if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
+            Object.Destroy(enemy);
+
+        enemy = GameObject.FindGameObjectWithTag("e4");
+        if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
+            Object.Destroy(enemy);
+
+        enemy = GameObject.FindGameObjectWithTag("e5");
+        if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
+            Object.Destroy(enemy);
+
+        enemy = GameObject.FindGameObjectWithTag("e6");
+        if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
+            Object.Destroy(enemy);
+    }
 }

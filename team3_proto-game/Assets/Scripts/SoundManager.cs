@@ -9,6 +9,9 @@ public class SoundManager : MonoBehaviour
     public static AudioClip cage;
     public static AudioClip gem;
     public static AudioClip confetti;
+    public static AudioClip swish;
+    public static AudioClip ink;
+
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -19,6 +22,8 @@ public class SoundManager : MonoBehaviour
         cage = Resources.Load<AudioClip>("cage");
         gem = Resources.Load<AudioClip>("gem");
         confetti = Resources.Load<AudioClip>("confetti");
+        swish = Resources.Load<AudioClip>("swish");
+        ink = Resources.Load<AudioClip>("ink");
         audioSrc = GetComponent<AudioSource>();
 
     }
@@ -48,6 +53,13 @@ public class SoundManager : MonoBehaviour
             case "confetti":
                 audioSrc.PlayOneShot(confetti);
                 break;
+            case "swish":
+                audioSrc.PlayOneShot(swish);
+                break;
+            case "ink":
+                audioSrc.PlayOneShot(ink);
+                break;
+
         }
     }
 }

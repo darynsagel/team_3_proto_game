@@ -22,7 +22,7 @@ public class Movement2 : MonoBehaviour
         float speed = 5;
         if (stopped == false)
         {
-            if (gameObject.tag == "Enemy(Left)")
+            if (gameObject.tag == "Enemy" || gameObject.tag == "e2" || gameObject.tag == "e3" || gameObject.tag == "e4" || gameObject.tag == "e1" || gameObject.tag == "e5" || gameObject.tag == "e6")
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
             }
@@ -57,9 +57,9 @@ public class Movement2 : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Cage")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Cage" || gameObject.tag == "e2" || gameObject.tag == "e3" || gameObject.tag == "e4" || gameObject.tag == "e1" || gameObject.tag == "e5" || gameObject.tag == "e6")
         {           
-            if(gameObject.tag == "Enemy(Left)")
+            if(gameObject.tag == "Enemy" || gameObject.tag == "e2" || gameObject.tag == "e3" || gameObject.tag == "e4" || gameObject.tag == "e1" || gameObject.tag == "e5" || gameObject.tag == "e6")
             {
                 Debug.Log("Left facing touch wall");
                 left();

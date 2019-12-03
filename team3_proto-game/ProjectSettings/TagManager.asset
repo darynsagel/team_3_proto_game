@@ -23,6 +23,12 @@ TagManager:
   - Gem11
   - Gem12
   - Gem13
+  - e1
+  - e2
+  - e3
+  - e4
+  - e5
+  - e6
   layers:
   - Default
   - TransparentFX

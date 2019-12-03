@@ -22,8 +22,9 @@ public class propulsion : MonoBehaviour
             if (Input.GetKeyDown(push) && Time.time > starttime)
             {
             starttime = Time.time + timebtwn;
-                fast = 60.0f;
-                Invoke("resetspeed", 0.75f);
+            fast = 60.0f;
+            SoundManager.PlaySound("swish");
+            Invoke("resetspeed", 0.75f);
 
             }
 
@@ -34,8 +35,4 @@ public class propulsion : MonoBehaviour
         fast = 20.0f;
     }
 
-    public void chill()
-    {
-
-    }
 }
