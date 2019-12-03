@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
                 SoundManager.PlaySound("confetti");
                 confetti_clone = Instantiate(confetti, Fish.transform.position, Quaternion.identity);
                 Destroy(confetti_clone.gameObject, 2f);
-                Invoke("endgame", 2f); // CHANGE TO CUTSCENE, NOT ENDGAME
+                Invoke("next", 2f); // CHANGE TO CUTSCENE, NOT ENDGAME
             }
             else
             {
@@ -427,4 +427,10 @@ public class PlayerController : MonoBehaviour
         if (Vector2.Distance(gameObject.transform.position, enemy.transform.position) < 10)
             Object.Destroy(enemy);
     }
+
+    public void next()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+	}
 }
