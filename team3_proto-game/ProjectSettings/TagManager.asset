@@ -29,6 +29,10 @@ TagManager:
   - e4
   - e5
   - e6
+  - h1
+  - h2
+  - h4
+  - h3
   layers:
   - Default
   - TransparentFX

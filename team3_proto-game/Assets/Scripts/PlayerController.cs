@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public int score = 0;
     public Text scoreBoard;
 
-    private GameObject CageObj, Gem, EnemyHit, Fish;
+    private GameObject CageObj, Gem, EnemyHit, Fish, heart;
 	private Rigidbody2D rb;
 	private Vector2 moveVelocity;
 
@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
     private float timetostart = 0.0f;
     private GameObject enemy;
 
+    public int life, maxlife;
+    public Image[] hearts;
+    public Sprite yesheart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +44,8 @@ public class PlayerController : MonoBehaviour
         gemtext.enabled = false;
         speed = 20.0f;
         alph = 1.0f;
+        life = 3;
+        maxlife = 3;
     }
 
     // Update is called once per frame
@@ -82,6 +88,14 @@ public class PlayerController : MonoBehaviour
             Invoke("stopInk", 3);
             Invoke("destroyenemy", 2);
         }
+
+        for (int i = 0; i < maxlife; i++)
+        {
+            if (i < life)
+                hearts[i].enabled = true;
+            else
+                hearts[i].enabled = false;
+        }
     }
 
     void FixedUpdate()
@@ -96,6 +110,42 @@ public class PlayerController : MonoBehaviour
             CageObj = GameObject.FindGameObjectWithTag("Cage");
             SoundManager.PlaySound("cage");
             Object.Destroy(CageObj);
+        }
+        else if (other.gameObject.CompareTag("h1"))
+        {
+            if (life < 3)
+            {
+                heart = GameObject.FindGameObjectWithTag("h1");
+                life++;
+                Object.Destroy(heart);
+            }
+        }
+        else if (other.gameObject.CompareTag("h2"))
+        {
+            if (life < 3)
+            {
+                heart = GameObject.FindGameObjectWithTag("h2");
+                life++;
+                Object.Destroy(heart);
+            }
+        }
+        else if (other.gameObject.CompareTag("h3"))
+        {
+            if (life < 3)
+            {
+                heart = GameObject.FindGameObjectWithTag("h3");
+                life++;
+                Object.Destroy(heart);
+            }
+        }
+        else if (other.gameObject.CompareTag("h4"))
+        {
+            if (life < 3)
+            {
+                heart = GameObject.FindGameObjectWithTag("h4");
+                life++;
+                Object.Destroy(heart);
+            }
         }
         else if (other.gameObject.CompareTag("VictoryFish"))
         {
@@ -315,9 +365,20 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Enemy(Left)") || other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e1") || other.gameObject.CompareTag("e5") || other.gameObject.CompareTag("e6"))
         {
-            SoundManager.PlaySound("enemybump");
+            if (alph > 0.5)
+            {
+                SoundManager.PlaySound("enemybump");
+                life--;
+            }
+            else
+            {
+                if (other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e6"))
+                    life--;
+            }
 
         }
+        if (life == 0)
+            endgame();
      
     }
 
