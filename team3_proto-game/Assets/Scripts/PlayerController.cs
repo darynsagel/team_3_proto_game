@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
         someScale = transform.localScale.x;
         gemtext.enabled = false;
+        speed = 20.0f;
+        alph = 1.0f;
     }
 
     // Update is called once per frame
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
         }
 
         alph = GameObject.Find("Player").GetComponent<PlayerAlpha>().alphaLevel;
+        speed = GameObject.Find("Player").GetComponent<propulsion>().fast;
     }
 
     void FixedUpdate()
@@ -315,4 +318,5 @@ public class PlayerController : MonoBehaviour
         gemtext.enabled = false;
         gemtext.text = "";
     }
+
 }
