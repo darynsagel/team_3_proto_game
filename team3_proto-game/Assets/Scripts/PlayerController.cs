@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     float verticalMove, horizontalMove, totalMove, someScale;
 
-
     public ParticleSystem gemsys;
     private ParticleSystem gemsys_clone;
 
@@ -24,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private ParticleSystem confetti_clone;
 
     public Text gemtext;
+
+    public float alph;
 
 
     // Start is called before the first frame update
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
             SoundManager.PlaySound("bubbles");
         }
 
-
+        alph = GameObject.Find("Player").GetComponent<PlayerAlpha>().alphaLevel;
     }
 
     void FixedUpdate()
@@ -100,133 +101,196 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Gem1"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem1");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score++;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem1");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score++;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem2"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem2");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score++;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem2");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score++;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem3"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem3");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score++;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem3");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score++;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem4"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem4");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score++;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem4");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score++;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem5"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem5");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score++;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem5");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score++;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem10"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem10");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 5;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem10");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 5;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem6"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem6");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score++;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem6");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score++;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem7"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem7");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 10;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem7");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 10;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem8"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem8");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 5;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem8");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 5;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem9"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem9");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 10;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem9");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 10;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
         }
         else if (other.gameObject.CompareTag("Gem11"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem11");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 5;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem11");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 5;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem12"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem12");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 10;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+                Gem = GameObject.FindGameObjectWithTag("Gem12");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 10;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+
+            }
+
         }
         else if (other.gameObject.CompareTag("Gem13"))
         {
-            Gem = GameObject.FindGameObjectWithTag("Gem13");
-            gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
-            SoundManager.PlaySound("gem");
-            Object.Destroy(Gem);
-            score = score + 10;
-            scoreBoard.text = "Score: " + score;
-            Destroy(gemsys_clone.gameObject, 2f);
+            if (alph > 0.5)
+            {
+
+                Gem = GameObject.FindGameObjectWithTag("Gem13");
+                gemsys_clone = Instantiate(gemsys, Gem.transform.position, Quaternion.identity);
+                SoundManager.PlaySound("gem");
+                Object.Destroy(Gem);
+                score = score + 10;
+                scoreBoard.text = "Score: " + score;
+                Destroy(gemsys_clone.gameObject, 2f);
+            }
+
         }
     }
 
