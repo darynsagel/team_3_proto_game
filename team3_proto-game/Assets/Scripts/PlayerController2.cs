@@ -5,15 +5,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
-	public float speed;
+    public float speed;
     public int score = 0;
     public Text scoreBoard;
 
     private GameObject CageObj, Gem, EnemyHit, Fish, heart;
-	private Rigidbody2D rb;
-	private Vector2 moveVelocity;
+    private Rigidbody2D rb;
+    private Vector2 moveVelocity;
 
     public Animator animator;
     float verticalMove, horizontalMove, totalMove, someScale;
@@ -28,12 +28,13 @@ public class PlayerController : MonoBehaviour
 
     public float alph;
 
+    private int e1d = 0, e2d = 0, e3d = 0, e4d = 0, e5d = 0, e6d = 0, e7d = 0, e8d = 0;
+
     public ParticleSystem inksplot;
     public KeyCode activate;
     private float btwntime = 5.0f;
     private float timetostart = 0.0f;
-    public GameObject enemy1, enemy2, enemy3, enemy4, enemy5, enemy6;
-    private int e1d = 0, e2d = 0, e3d = 0, e4d = 0, e5d = 0, e6d = 0;
+    public GameObject enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8;
 
     public int life, maxlife;
     public Image[] hearts;
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         someScale = transform.localScale.x;
         gemtext.enabled = false;
         speed = 20.0f;
@@ -54,8 +55,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-		moveVelocity = moveInput.normalized * speed;
+        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        moveVelocity = moveInput.normalized * speed;
 
         verticalMove = Input.GetAxis("Vertical");
         horizontalMove = Input.GetAxis("Horizontal");
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("speed", Mathf.Abs(totalMove));
 
-        if(horizontalMove < 0)
+        if (horizontalMove < 0)
         {
             transform.localScale = new Vector2(-someScale, transform.localScale.y);
             animator.SetFloat("speed", Mathf.Abs(totalMove));
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("speed", Mathf.Abs(totalMove));
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) )
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             SoundManager.PlaySound("bubbles");
         }
@@ -90,6 +91,7 @@ public class PlayerController : MonoBehaviour
             inksplot.Play();
             Invoke("destroyenemy", 1);
             Invoke("stopInk", 3);
+
         }
 
         for (int i = 0; i < maxlife; i++)
@@ -102,9 +104,9 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate()
-	{
-		rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
-	}
+    {
+        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -154,7 +156,7 @@ public class PlayerController : MonoBehaviour
         {
             Fish = GameObject.FindGameObjectWithTag("VictoryFish");
 
-            if (score >= 45)
+            if (score >= 60)
             {
                 SoundManager.PlaySound("confetti");
                 confetti_clone = Instantiate(confetti, Fish.transform.position, Quaternion.identity);
@@ -164,7 +166,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 gemtext.enabled = true;
-                gemtext.text = "At least 45 gem points needed to continue!";
+                gemtext.text = "At least 60 gem points needed to continue!";
                 Invoke("notext", 3f);
 
             }
@@ -366,7 +368,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Enemy(Left)") || other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e1") || other.gameObject.CompareTag("e5") || other.gameObject.CompareTag("e6"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Enemy(Left)") || other.gameObject.CompareTag("e8") ||other.gameObject.CompareTag("e7") || other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e1") || other.gameObject.CompareTag("e5") || other.gameObject.CompareTag("e6"))
         {
             if (alph > 0.5)
             {
@@ -375,13 +377,14 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e6"))
+                if (other.gameObject.CompareTag("e2") || other.gameObject.CompareTag("e3") || other.gameObject.CompareTag("e7") || other.gameObject.CompareTag("e8") ||other.gameObject.CompareTag("e4") || other.gameObject.CompareTag("e6"))
                     life--;
             }
 
         }
         if (life == 0)
             SceneManager.LoadScene(5);
+
     }
 
 
@@ -467,11 +470,32 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // enemy7 = GameObject.FindGameObjectWithTag("e7");
+        if (e7d == 0)
+        {
+            if (Vector2.Distance(gameObject.transform.position, enemy5.transform.position) < 40)
+            {
+                Object.Destroy(enemy7);
+                Debug.Log("7 destroyed");
+                e7d = 1;
+            }
+        }
+
+        // enemy8 = GameObject.FindGameObjectWithTag("e8");
+        if (e8d == 0)
+        {
+            if (Vector2.Distance(gameObject.transform.position, enemy6.transform.position) < 40)
+            {
+                Object.Destroy(enemy8);
+                Debug.Log("8 destroyed");
+                e8d = 1;
+            }
+        }
     }
 
-    public void next()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+public void next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-	}
+    }
 }

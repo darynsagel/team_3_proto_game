@@ -19,7 +19,7 @@ public class Movement2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = 5;
+        float speed = 2;
         if (stopped == false)
         {
             if (gameObject.tag == "Enemy" || gameObject.tag == "e2" || gameObject.tag == "e3" || gameObject.tag == "e4" || gameObject.tag == "e1" || gameObject.tag == "e5" || gameObject.tag == "e6")

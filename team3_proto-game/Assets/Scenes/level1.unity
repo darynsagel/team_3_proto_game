@@ -9931,6 +9931,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 726484863304443622, guid: 9b8ede61442e348279f7b99c48630856,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8ede61442e348279f7b99c48630856, type: 3}
 --- !u!1001 &908885889032370709
@@ -10048,6 +10053,12 @@ MonoBehaviour:
   alph: 0
   inksplot: {fileID: 275221289}
   activate: 50
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemy4: {fileID: 0}
+  enemy5: {fileID: 0}
+  enemy6: {fileID: 0}
   life: 0
   maxlife: 0
   hearts:
@@ -10809,12 +10820,12 @@ PrefabInstance:
     - target: {fileID: 3352509108725139161, guid: 66c5453d396954280a6a78fb0b257077,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3352509108725139161, guid: 66c5453d396954280a6a78fb0b257077,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79
+      value: 78.6
       objectReference: {fileID: 0}
     - target: {fileID: 3352509108725139161, guid: 66c5453d396954280a6a78fb0b257077,
         type: 3}
@@ -10866,6 +10877,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1543611411096429598}
+    - target: {fileID: 3352509108725138982, guid: 66c5453d396954280a6a78fb0b257077,
+        type: 3}
+      propertyPath: orthographic size
+      value: 19.875015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c5453d396954280a6a78fb0b257077, type: 3}
 --- !u!1001 &4644594046347888665
@@ -11082,11 +11098,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6743726373156930426, guid: 29b50bfe067ad42aea72d4b80cb7472a,
+    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
         type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
+      propertyPath: scoreBoard
+      value: 
+      objectReference: {fileID: 799114204}
+    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
+        type: 3}
+      propertyPath: gemtext
+      value: 
+      objectReference: {fileID: 2073301296}
+    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
+        type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 85592600}
+    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
+        type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1229379384}
+    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
+        type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 160022919}
     - target: {fileID: 6743726373156930308, guid: 29b50bfe067ad42aea72d4b80cb7472a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11142,31 +11178,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
+    - target: {fileID: 6743726373156930426, guid: 29b50bfe067ad42aea72d4b80cb7472a,
         type: 3}
-      propertyPath: scoreBoard
-      value: 
-      objectReference: {fileID: 799114204}
-    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
-        type: 3}
-      propertyPath: gemtext
-      value: 
-      objectReference: {fileID: 2073301296}
-    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
-        type: 3}
-      propertyPath: hearts.Array.data[0]
-      value: 
-      objectReference: {fileID: 85592600}
-    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
-        type: 3}
-      propertyPath: hearts.Array.data[1]
-      value: 
-      objectReference: {fileID: 1229379384}
-    - target: {fileID: 6743726373156930310, guid: 29b50bfe067ad42aea72d4b80cb7472a,
-        type: 3}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 160022919}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b50bfe067ad42aea72d4b80cb7472a, type: 3}
 --- !u!1001 &5330263108481691242
